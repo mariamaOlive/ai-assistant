@@ -50,7 +50,7 @@ Open the project notebook and run the cells in order.
 
 ---
 
-## Approach
+## Case Approach
 
 Brief description of the approach utilized on the case. More comments are available on the notebook.
 
