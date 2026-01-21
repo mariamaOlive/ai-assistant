@@ -94,4 +94,5 @@ Project structure:
 │  └─ prompts.py
 └─ tools/
    └─ calculator.py
+   └─ exchange_rate.py
 ```
