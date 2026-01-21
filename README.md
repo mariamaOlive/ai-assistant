@@ -54,7 +54,7 @@ Open the project notebook and run the cells in order.
 
 ---
 
-## Case Approach
+## Case Approach 
 
 Brief description of the approach utilized on the case. More comments are available on the notebook.
 
@@ -77,11 +77,12 @@ This implementation uses a single agent responsible for:
 - deciding whether it requires an exact arithmetic calculation,
 - calling the calculator tool (math) or answering directly (non-math).
 
-A multi-agent design (e.g., a separate router agent plus specialized agents) is possible, but it would add unnecessary complexity for this simple task.
+A multi-agent design (e.g., a separate router agent plus specialized agents) was considered, but it would add unnecessary complexity for this simple task.
+
+As a BONUS feature it was included a call for a currency exchange rate for calculations replies. It was included as a bonus to demonstrate how the assistant can integrate additional external tools.
 
 ---
-
-## Project Structure
+### Project Structure
 
 Tools and prompts are stored in separate files rather than embedded directly in the notebook.
 
@@ -100,3 +101,15 @@ Project structure:
    └─ calculator.py
    └─ exchange_rate.py
 ```
+---
+### Lessons learned and Limitations
+
+1. LangChain, as the chosen framework, allows different types of configurations that can be selected according to the project’s needs. Because this is the MVP of an assistant, the configuration chosen was minimal. In a production environment, it would be worth leveraging additional features to improve maintainability and user experience, such as tracking users and conversations by ID and persisting conversation history across sessions.
+
+2. Even though the assistant is working, there are some limitations. Mainly, for example, the ambiguity of how a mathematical expression can be written in natural language. For example: *“How much is the cube root of four multiplied by two?”* could be parsed as `(4 ** (1/3)) * 2` or as `(4 * 2) ** (1/3)`, depending on how the grouping is interpreted. Therefore, for better parsing a more in depth logic could be implemented.
+
+3. The main focus of the implementation was tool calling (function invocation); therefore, the calculator implementation is limited and needs improvements if this solution were to go to production.
+
+4. Before putting this kind of solution into production, it would also be important to monitor token usage and latency under different configurations (ex. chosen model, prompt) in order to choose the best approach.
+
+5. Lastly, if more responsibilities were added to the assistant, I would probably split them across separate agents or adopt an agent pattern such as ReAct, because in my experience an agent with too many responsibilities tends to perform poorly across tasks or fail to execute some of them.
