@@ -5,6 +5,10 @@
 This project implements a small AI assistant that can **decide when to answer normally** (LLM-only) and **when to call an external tool** (a calculator).
 
 ---
+## Pré-requisitos
+
+- Python 3.8+
+- Jupyter Notebook
 
 ## Setup (Notebook)
 
@@ -14,7 +18,7 @@ First, make sure you're in the project directory and then:
 
 macOS/Linux
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate  
 ```
 Windows
@@ -43,7 +47,7 @@ OPENAI_API_KEY=...
 
 ### 4) Run the notebook
 ```bash
-jupyter notebook
+jupyter notebook case_notebook.ipynb
 ```
 
 Open the project notebook and run the cells in order.
