@@ -1,4 +1,5 @@
 # AI Assistant with Tool Calling (Calculator)
+###  Artefact Case - Junior AI Engineer
 
 ## Overview
 This project implements a small AI assistant that can **decide when to answer normally** (LLM-only) and **when to call an external tool** (a calculator).
@@ -8,6 +9,8 @@ This project implements a small AI assistant that can **decide when to answer no
 ## Setup (Notebook)
 
 ### 1) Create and activate a virtual environment
+
+First, make sure you're in the project directory and then:
 
 macOS/Linux
 ```bash
