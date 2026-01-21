@@ -1,6 +1,9 @@
 # AI Assistant with Tool Calling (Calculator)
 ###  Artefact Case - Junior AI Engineer
 
+Mariama Oliveira - AI Engineer – Full-Stack para Aplicações com IA Generativa - Vaga afirmativa para mulheres cis e trans
+
+
 ## Overview
 This project implements a small AI assistant that can **decide when to answer normally** (LLM-only) and **when to call an external tool** (a calculator).
 
